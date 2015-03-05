@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+  <head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css"/>
+<title>Mmap</title>
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script>
+	function initialize() {
+				var landmark = new google.maps.LatLng(42.3599611, -71.0567528);
+				// Set up map
+				var myOptions = {
+					zoom: 15, // The larger the zoom number, the bigger the zoom
+					center: landmark,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				};// Create the map in the "map_canvas" <div>
+				var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+				// Create a marker				
+				var mark = new google.maps.Marker({
+					position: landmark,
+					title: "TravisIsdale"
+				});
+				mark.setMap(map);
+
+				// This is a global info window...
+				var infowindow = new google.maps.InfoWindow();
+				// Open info window on click of marker
+				google.maps.event.addListener(mark, 'click', function() {
+					infowindow.setContent(mark.title);
+					infowindow.open(map, mark);
+
+				});
+
+			}	
+
+
+	
+</script>
+
+
+  </head>
+	<body onload="initialize()">
+	<div id="map_canvas" style="width:100%; height:100%"></div>
+
+	</body>
+
+
+</html>
