@@ -43,6 +43,12 @@
 							myLng = position.coords.longitude;
 							console.log("3. Leaving the function(position)...");
 						});
+					}
+				else {
+
+					alert("Geolocation is not supported by your web browser.  What a shame!");
+
+				}
 
 							
 				}
