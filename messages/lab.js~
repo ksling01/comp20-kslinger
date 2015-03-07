@@ -5,11 +5,11 @@ console.log(request.readyState);
 	request.send();
 	console.log(request.readyState);
 	if(request.readyState == 4 && request.status == 200) {
-	    	content = JSON.parse(request.responseText);
+	    	content = request.responseText;
 		console.log(request.readyState);
 		document.getElementById("messages").innerHTML = content;
 		alert(content);		
 	}
-	
+	console.log(request.readyState);
 
 }
