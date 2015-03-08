@@ -13,15 +13,16 @@
 	//myLat = 0;
 	//myLng = 0;
 	//console.log("1. In getMyLocation()");
-	//if (navigator.geolocation) { // the navigator.geolocation object is supported on your browser
+	if (navigator.geolocation) { // the navigator.geolocation object is supported on your browser
 		navigator.geolocation.getCurrentPosition(function(position) {
 		
 		myLat = position.coords.latitude;
 		x=myLat;
 		myLng = position.coords.longitude;
 		console.log("3. Leaving the function(position)... "+ myLat + " " + myLng);
+		setup();
 					});
-				
+				}
 					
 
 			//request = new XMLHttpRequest();
@@ -34,10 +35,11 @@
 
 		//	}
 		//}
-
+			}				
+				function setup() {
 				var landmark = new google.maps.LatLng(myLat, myLng);
 				// Set up map
-console.log("2. Finally got your location!");
+				console.log("2. Finally got your location!");
 				var myOptions = {
 					zoom: 15, // The larger the zoom number, the bigger the zoom
 					center: landmark,
