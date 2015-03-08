@@ -7,6 +7,8 @@
 <title>Mmap</title>
 <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
 <script>
+	var myLat = 0;
+	var myLng = 0;
 	function initialize() {
 	//myLat = 0;
 	//myLng = 0;
@@ -17,7 +19,7 @@
 		myLat = position.coords.latitude;
 		x=myLat;
 		myLng = position.coords.longitude;
-		//console.log("3. Leaving the function(position)... "+ myLat + " " + myLng);
+		console.log("3. Leaving the function(position)... "+ myLat + " " + myLng);
 					});
 				}
 		else {
@@ -37,7 +39,7 @@
 		//	}
 		//}
 
-				var landmark = new google.maps.LatLng(x, myLng);
+				var landmark = new google.maps.LatLng(myLat, myLng);
 				// Set up map
 				var myOptions = {
 					zoom: 15, // The larger the zoom number, the bigger the zoom
