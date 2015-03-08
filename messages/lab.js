@@ -1,15 +1,41 @@
 function parse () {
-	request = new XMLHttpRequest();
-	request.open("get", "data.json", true);	
-console.log(request.readyState);
-	request.send();
-	console.log(request.readyState);
-	//if(request.readyState == 4 && request.status == 200) {
-	    	content = request.responseText;
-		console.log(request.readyState);
-		document.getElementById("messages").innerHTML = content;
-		alert(content);		
-	//}
-	
+// Create instance of XHR object
 
+		xhr = new XMLHttpRequest();
+
+		// Set up the request
+
+		xhr.open("get", "data.json", true);
+
+		// Set up handler for the response
+
+		xhr.onreadystatechange = myCallbackFunction;
+
+		// Execute the request
+
+		xhr.send();
+
+		function myCallbackFunction() {
+
+			console.log("In my callback function " + xhr.readyState);
+
+			if (xhr.readyState == 4 && xhr.status == 200) {
+
+				alert("Got data back!");
+
+				data = JSON.parse(xhr.responseText);
+
+				/*var result = "";
+
+				for (i = 0; i < data.length; i++) {
+
+					result += "<p>" + data[i]['username'] + " - " + data[i]["content"] + "</p>";
+
+				}*/
+
+				document.getElementById("messages").innerHTML = xhr.responseText;
+
+			}
+
+		}
 }

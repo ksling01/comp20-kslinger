@@ -1,6 +1,6 @@
 function parse () {
 	request = new XMLHttpRequest();
-	request.open("GET", "data.json", true);	
+	request.open("get", "data.json", true);	
 console.log(request.readyState);
 	request.send();
 	console.log(request.readyState);
