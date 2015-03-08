@@ -21,7 +21,7 @@
 		myLng = position.coords.longitude;
 		console.log("3. Leaving the function(position)... "+ myLat + " " + myLng);
 					});
-				}
+				
 					
 
 			//request = new XMLHttpRequest();
@@ -62,7 +62,7 @@ console.log("2. Finally got your location!");
 
 					
 			
-				}
+				}}
 
 	
 
