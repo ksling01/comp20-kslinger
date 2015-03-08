@@ -9,7 +9,7 @@ function parse () {
 				data = JSON.parse(request.responseText);
 				for(i=0;i<2;i++) {
 				phrase= data[0].content +" "+ data[0].username+'div'+data[1].content
-					document.getElementById("messages").innerHTML = data[0].content +" "+ data[0].username;
+					document.getElementById("messages").innerHTML = phrase;
 					
 				}
 			}
