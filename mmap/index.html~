@@ -36,7 +36,7 @@
 		//	}
 		//}
 
-				var landmark = new google.maps.LatLng(42.3599611, -71.0567528);
+				var landmark = new google.maps.LatLng(myLat, myLng);
 				// Set up map
 				var myOptions = {
 					zoom: 15, // The larger the zoom number, the bigger the zoom
