@@ -8,7 +8,7 @@ function parse () {
 			if (request.readyState == 4 && request.status == 200) {
 				data = JSON.parse(request.responseText);
 				for(i=0;i<2;i++) {
-				phrase= data[0].content +" "+ data[0].username;
+				phrase= data[i].content +" "+ data[i].username;
 				//var div= document.getElementById("messages");
 				//var cont=document.createTextNode(phrase);
 				//div.appendChild(cont);
