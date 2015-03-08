@@ -13,7 +13,7 @@
 	console.log("1. In getMyLocation()");
 	if (navigator.geolocation) { // the navigator.geolocation object is supported on your browser
 		navigator.geolocation.getCurrentPosition(function(position) {
-		console.log("2. Finally got your location!");
+		//console.log("2. Finally got your location!");
 		myLat = position.coords.latitude;
 		myLng = position.coords.longitude;
 		console.log("3. Leaving the function(position)... "+ myLat + " " + myLng);
