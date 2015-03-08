@@ -16,7 +16,7 @@
 		//console.log("2. Finally got your location!");
 		myLat = position.coords.latitude;
 		myLng = position.coords.longitude;
-		console.log("3. Leaving the function(position)... "+ myLat + " " + myLng);
+		//console.log("3. Leaving the function(position)... "+ myLat + " " + myLng);
 					});
 				}
 		else {
