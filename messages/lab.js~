@@ -8,8 +8,8 @@ function parse () {
 			if (request.readyState == 4 && request.status == 200) {
 				data = JSON.parse(request.responseText);
 				for(i=0;i<2;i++) {
-				phrase= data[0].content +" "+ data[0].username+ <div> +data[1].content;
-					document.getElementById("messages").innerHTML = phrase;
+				phrase= data[0].content +" "+ data[0].username;
+					document.getElementById("messages").innerHTML = div.innerHTML+ phrase;
 					
 				}
 			}
