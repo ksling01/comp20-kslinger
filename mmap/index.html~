@@ -22,11 +22,7 @@
 		console.log("3. Leaving the function(position)... "+ myLat + " " + myLng);
 					});
 				}
-		else {
-
-		console.log("Geolocation is not supported by your web browser.  What a shame!");
-
-				}			
+					
 
 			//request = new XMLHttpRequest();
 		//request.open("POST", "https://secret-about-box.herokuapp.com/sendLocation", true);
