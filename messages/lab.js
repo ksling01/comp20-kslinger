@@ -7,8 +7,14 @@ function parse () {
 			console.log("In my callback function " + request.readyState);
 			if (request.readyState == 4 && request.status == 200) {
 				data = JSON.parse(request.responseText);
-				
-				document.getElementById("messages").innerHTML = data[0].content +" "+ data[0].username;
+				for(i=0;i<2;i++) {
+					parent=document.getElementById("messages").innerHTML;
+					kid = document.createElement("div");
+					kid.innerHTML = data[i].content +" "+ data[i].username;
+					parent.appendChild(kid);
+					parent.insertBefore(kid, parent.firstChild);
+					
+				}
 			}
 		}
 }
