@@ -11,7 +11,7 @@ function parse () {
 					parent=document.getElementById("messages").innerHTML;
 					kid = document.createElement("div");
 					kid.innerHTML = data[i].content +" "+ data[i].username;
-					parent.appendChild(kid);
+					//parent.appendChild(kid);
 					parent.insertBefore(kid, parent.firstChild);
 					
 				}
