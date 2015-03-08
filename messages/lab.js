@@ -8,7 +8,7 @@ function parse () {
 			if (request.readyState == 4 && request.status == 200) {
 				data = JSON.parse(request.responseText);
 				
-				document.getElementById("messages").innerHTML = data;
+				document.getElementById("messages").innerHTML = data{0};
 			}
 		}
 }
