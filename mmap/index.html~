@@ -11,9 +11,6 @@
 	var myLat = 0;
 	var myLng = 0;
 	function initialize() {
-	//myLat = 0;
-	//myLng = 0;
-	//console.log("1. In getMyLocation()");
 	if (navigator.geolocation) { // the navigator.geolocation object is supported on your browser
 		navigator.geolocation.getCurrentPosition(function(position) {
 		

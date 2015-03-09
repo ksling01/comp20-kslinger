@@ -19,7 +19,34 @@
 		console.log("3. Leaving the function(position)... "+ myLat + " " + myLng);
 		getdata();
 		setup();
-		stuff.forEach(every);
+		stuff.forEach(function(value, index, ar) {
+				login=value.login;
+				lat=value.lat;
+				lng=value.lng;	
+				var landmark = new google.maps.LatLng(lat, lng);
+				// Create a marker				
+				var mark = new google.maps.Marker({
+					position: landmark,
+					title: "login"
+				});
+				mark.setMap(map);
+
+				// This is a global info window...
+				var infowindow = new google.maps.InfoWindow();
+				// Open info window on click of marker
+				google.maps.event.addListener(mark, 'click', function() {
+					infowindow.setContent(mark.title);
+					infowindow.open(map, mark);
+
+				});
+
+	
+				
+				}
+
+
+
+
 					});
 				}
 					
@@ -50,30 +77,7 @@
 
 				});
 				}
-				function every(login,lat,lng) {
-
 				
-				
-				var landmark = new google.maps.LatLng(lat, lng);
-				// Create a marker				
-				var mark = new google.maps.Marker({
-					position: landmark,
-					title: "login"
-				});
-				mark.setMap(map);
-
-				// This is a global info window...
-				var infowindow = new google.maps.InfoWindow();
-				// Open info window on click of marker
-				google.maps.event.addListener(mark, 'click', function() {
-					infowindow.setContent(mark.title);
-					infowindow.open(map, mark);
-
-				});
-
-	
-				
-				}
 
 
 			function getdata() {
