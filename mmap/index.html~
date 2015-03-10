@@ -35,7 +35,8 @@
 				var d = R * c; 
 				d=d.toFixed(1);
 				login=val.login;
-				login=login+" " +d;	
+				login=login+" " +d,
+					
 				var marker = new google.maps.Marker({
 				
 				position: new google.maps.LatLng(lat, lng),
@@ -60,7 +61,10 @@
 				// Create a marker				
 				var mark = new google.maps.Marker({					
 					position: landmark,
-					title: "TravisIsdale"
+					title: "TravisIsdale",
+					icon: new google.maps.MarkerImage('headshot.jpg', null, null, null,
+
+			        new google.maps.Size(20, 20))
 				});
 				mark.setMap(map);
 
