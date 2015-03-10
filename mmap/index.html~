@@ -21,6 +21,7 @@
 		getdata();
 		setup();
 		xhr.onreadystatechange = function () {
+	console.log("yay");
 		stuff.forEach(function(val, index, theArray) {
 				login=val.login;
 				lat=value.lat;
@@ -47,7 +48,7 @@
 				
 				}
 				});
-
+				
 				}
 
 
