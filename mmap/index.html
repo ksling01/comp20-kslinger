@@ -58,10 +58,8 @@
 				};// Create the map in the "map_canvas" <div>
 				 map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 				// Create a marker				
-				var mark = new google.maps.Marker({
-					var image = 'headshot.png';					
+				var mark = new google.maps.Marker({					
 					position: landmark,
-					//icon: image,
 					title: "TravisIsdale"
 				});
 				mark.setMap(map);
