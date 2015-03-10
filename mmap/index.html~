@@ -27,19 +27,19 @@
 				lng=value.lng;	
 				var landmark = new google.maps.LatLng(lat, lng);
 				// Create a marker				
-				var mark = new google.maps.Marker({
-					position: landmark,
-					title: "login"
-				});
-				mark.setMap(map);
-
-				// This is a global info window...
-				var infowindow = new google.maps.InfoWindow();
-				// Open info window on click of marker
-				google.maps.event.addListener(mark, 'click', function() {
-					infowindow.setContent(mark.title);
-					infowindow.open(map, mark);
-
+//				var mark = new google.maps.Marker({
+//					position: landmark,
+//					title: "login"
+//				});
+//				mark.setMap(map);
+//
+//				// This is a global info window...
+//				var infowindow = new google.maps.InfoWindow();
+//				// Open info window on click of marker
+//				google.maps.event.addListener(mark, 'click', function() {
+//					infowindow.setContent(mark.title);
+//					infowindow.open(map, mark);
+//
 				
 				});
 				
