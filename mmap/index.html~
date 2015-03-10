@@ -23,20 +23,18 @@
 		xhr.onreadystatechange = function () {
 		if (xhr.readyState == 4 && xhr.status == 200) {
 	stuff = JSON.parse(this.responseText);
-	console.log(stuff);
 		
 		stuff.forEach(function(val, index, theArray) {
 				login=val.login;
 				lat=val.lat;
 				lng=val.lng;	
-		console.log(login);
 				var landmark = new google.maps.LatLng(lat, lng);
 				// Create a marker				
 				var mark = new google.maps.Marker({
 					position: landmark,
 					title: "login"
 				});
-				var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);				
+				var map = new google.maps.Map(document.getElementById("map_canvas"));				
 				mark.setMap(map);
 
 				// This is a global info window...
