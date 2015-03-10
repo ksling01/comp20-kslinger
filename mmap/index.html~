@@ -60,11 +60,11 @@
 				 map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 				// Create a marker				
 				var mark = new google.maps.Marker({					
+					map:map,					
 					position: landmark,
 					title: "TravisIsdale",
 					icon: new google.maps.MarkerImage('headshot.jpg', null, null, null,
-
-			        new google.maps.Size(20, 20))
+			       		 new google.maps.Size(20, 20))
 				});
 				mark.setMap(map);
 
