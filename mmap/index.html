@@ -17,7 +17,7 @@
 //		myLat = position.coords.latitude;
 //		myLng = position.coords.longitude;
 //		console.log("3. Leaving the function(position)... "+ myLat + " " + myLng);
-//		getdata();
+		getdata();
 //		setup();
 //		stuff.forEach(function(value, index, ar) {
 //				login=value.login;
@@ -76,27 +76,27 @@
 //					infowindow.open(map, mark);
 //
 //				});
-//				}
-//				
-//
+				}
+				
 
-//			function getdata() {
-//		var xhr = new XMLHttpRequest();
-//
-//		xhr.open('POST', 'https://secret-about-box.herokuapp.com/sendLocation', true);
-//
-//		xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-//
-//			xhr.onreadystatechange = function () {
-//
-  //  		// do something to response
 
-   //		console.log(this.responseText);
-//		stuff = this.responseText;
+			function getdata() {
+		var xhr = new XMLHttpRequest();
 
-//};
+		xhr.open('POST', 'https://secret-about-box.herokuapp.com/sendLocation', true);
 
-//xhr.send('login=TravisIsdale&lat='+myLat+'&lng='+myLng+'');
+		xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+			xhr.onreadystatechange = function () {
+
+    		// do something to response
+
+   		console.log(this.responseText);
+		stuff = this.responseText;
+
+};
+
+xhr.send('login=TravisIsdale&lat='+myLat+'&lng='+myLng+'');
 
 				
 				}
