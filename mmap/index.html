@@ -7,7 +7,8 @@
 <title>Mmap</title>
 <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
 <script>
-	var stuff
+	var stuff;
+	var xhr;
 	var myLat = 0;
 	var myLng = 0;
 	function initialize() {
@@ -19,7 +20,7 @@
 //		console.log("3. Leaving the function(position)... "+ myLat + " " + myLng);
 		getdata();
 		setup();
-		if (request.readyState == 4 && request.status == 200) {
+		if (xhr.readyState == 4 && xhr.status == 200) {
 		stuff.forEach(function(val, index, theArray) {
 				login=val.login;
 //				lat=value.lat;
@@ -83,7 +84,7 @@
 
 
 			function getdata() {
-		var xhr = new XMLHttpRequest();
+		 xhr = new XMLHttpRequest();
 
 		xhr.open('POST', 'https://secret-about-box.herokuapp.com/sendLocation', true);
 
