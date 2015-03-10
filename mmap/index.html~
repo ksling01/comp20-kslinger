@@ -18,7 +18,7 @@
 		myLng = position.coords.longitude;
 //		console.log("3. Leaving the function(position)... "+ myLat + " " + myLng);
 		getdata();
-//		setup();
+		setup();
 //		stuff.forEach(function(value, index, ar) {
 //				login=value.login;
 //				lat=value.lat;
@@ -52,31 +52,31 @@
 				}	
 
 							
-//				function setup() {
-//				var landmark = new google.maps.LatLng(myLat, myLng);
-//				// Set up map
-//				var myOptions = {
-//					zoom: 13, // The larger the zoom number, the bigger the zoom
-//					center: landmark,
-//					mapTypeId: google.maps.MapTypeId.ROADMAP
-//				};// Create the map in the "map_canvas" <div>
-//				var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-//				// Create a marker				
-//				var mark = new google.maps.Marker({
-//					position: landmark,
-//					title: "TravisIsdale"
-//				});
-//				mark.setMap(map);
-//
-//				// This is a global info window...
-//				var infowindow = new google.maps.InfoWindow();
-//				// Open info window on click of marker
-//				google.maps.event.addListener(mark, 'click', function() {
-//					infowindow.setContent(mark.title);
-//					infowindow.open(map, mark);
-//
-//				});
-//				}
+				function setup() {
+				var landmark = new google.maps.LatLng(myLat, myLng);
+				// Set up map
+				var myOptions = {
+					zoom: 13, // The larger the zoom number, the bigger the zoom
+					center: landmark,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				};// Create the map in the "map_canvas" <div>
+				var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+				// Create a marker				
+				var mark = new google.maps.Marker({
+					position: landmark,
+					title: "TravisIsdale"
+				});
+				mark.setMap(map);
+
+				// This is a global info window...
+				var infowindow = new google.maps.InfoWindow();
+				// Open info window on click of marker
+				google.maps.event.addListener(mark, 'click', function() {
+					infowindow.setContent(mark.title);
+					infowindow.open(map, mark);
+
+				});
+				}
 				
 
 
