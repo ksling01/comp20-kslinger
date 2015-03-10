@@ -12,22 +12,18 @@
 	var myLat = 0;
 	var myLng = 0;
 	function initialize() {
-	if (navigator.geolocation) { // the navigator.geolocation object is supported on your browser
+	if (navigator.geolocation) { 
 		navigator.geolocation.getCurrentPosition(function(position) {
-		
 		myLat = position.coords.latitude;
 		myLng = position.coords.longitude;
-//		console.log("3. Leaving the function(position)... "+ myLat + " " + myLng);
 		getdata();
 		setup();
 		xhr.onreadystatechange = function () {
 		if (xhr.readyState == 4 && xhr.status == 200) {
-	stuff = JSON.parse(this.responseText);
-		
+		stuff = JSON.parse(this.responseText);
 		stuff.forEach(function(val, index, theArray) {
 				lat=val.lat;
 				lng=val.lng;
-
 				var R = 6371000; // km 
 				var x1 = lat-myLat;
 				var dLat =x1*Math.PI/180;  
@@ -35,11 +31,9 @@
 				var dLon =x2*Math.PI/180;  
 		var a = Math.sin(dLat/2)*Math.sin(dLat/2)+Math.cos(myLat*Math.PI/180) * Math.cos(lat*Math.PI/180)*Math.sin(dLon/2)*Math.sin(dLon/2);  
 			console.log(a);		
-			var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
-	//console.log(c);				
+			var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 				
 				var d = R * c; 
 				d=d.toFixed(1);
-	//console.log(d);
 				login=val.login;
 				login=login+" " +d;	
 				var marker = new google.maps.Marker({
@@ -47,25 +41,13 @@
 				position: new google.maps.LatLng(lat, lng),
               			map: map,
                			title: login
-            });
-
-           			 
-
+            			});
 				});
-				
-				
 				}
 				}
 				});
-				
 				}
-
-
-				
-				
-				}	
-
-							
+				}				
 				function setup() {
 				var landmark = new google.maps.LatLng(myLat, myLng);
 				// Set up map
@@ -92,31 +74,12 @@
 				});
 				}
 				
-
-
 			function getdata() {
 		 xhr = new XMLHttpRequest();
-
 		xhr.open('POST', 'https://secret-about-box.herokuapp.com/sendLocation', true);
-
 		xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-
-			//xhr.onreadystatechange = function () {
-
-    		// do something to response
-
-		
-
-//};
-
-xhr.send('login=TravisIsdale&lat='+myLat+'&lng='+myLng+'');
-
-				
-				}
-
-	
-
-	
+		xhr.send('login=TravisIsdale&lat='+myLat+'&lng='+myLng+'');				
+		}
 </script>
 
 
