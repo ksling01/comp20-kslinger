@@ -25,9 +25,25 @@
 	stuff = JSON.parse(this.responseText);
 		
 		stuff.forEach(function(val, index, theArray) {
-				login=val.login;
 				lat=val.lat;
-				lng=val.lng;	
+				lng=val.lng;
+
+				var R = 6371; // km 
+				var x1 = lat-mylat;
+				var dLat = x1.toRad();  
+				var x2 = lng-mylng;
+				var dLon = x2.toRad();  
+				var a = Math.sin(dLat/2) * Math.sin(dLat/2) + 
+
+               		 Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) * 
+
+                		Math.sin(dLon/2) * Math.sin(dLon/2);  
+
+				var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+
+				var d = R * c; 
+				login=val.login;
+				login=login+" " +d;	
 				var marker = new google.maps.Marker({
 				
 				position: new google.maps.LatLng(lat, lng),
@@ -36,23 +52,7 @@
             });
 
            			 
-//				var landmark = new google.maps.LatLng(lat, lng);
-				// Create a marker				
-//				var mark = new google.maps.Marker({
-//					position: landmark,
-//					title: "login"
-//				});
-//				var map = new google.maps.Map(document.getElementById("map_canvas"));				
-//				mark.setMap(map);
-//
-//				// This is a global info window...
-//				var infowindow = new google.maps.InfoWindow();
-//				// Open info window on click of marker
-//				google.maps.event.addListener(mark, 'click', function() {
-//					infowindow.setContent(mark.title);
-//					infowindow.open(map, mark);
-//
-//				});
+
 				});
 				
 				
@@ -72,7 +72,7 @@
 				var landmark = new google.maps.LatLng(myLat, myLng);
 				// Set up map
 				var myOptions = {
-					zoom: 13, // The larger the zoom number, the bigger the zoom
+					zoom: 14, // The larger the zoom number, the bigger the zoom
 					center: landmark,
 					mapTypeId: google.maps.MapTypeId.ROADMAP
 				};// Create the map in the "map_canvas" <div>
