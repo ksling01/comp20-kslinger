@@ -28,7 +28,15 @@
 				login=val.login;
 				lat=val.lat;
 				lng=val.lng;	
-				new google.maps.LatLng(lat,lng);
+				var marker = new google.maps.Marker({
+				
+				position: new google.maps.LatLng(lat, lng),
+              			  map: map,
+               			 draggable: false,
+            			    animation: google.maps.Animation.DROP
+            });
+
+            markerLocations.push(marker);
 //				var landmark = new google.maps.LatLng(lat, lng);
 				// Create a marker				
 //				var mark = new google.maps.Marker({
