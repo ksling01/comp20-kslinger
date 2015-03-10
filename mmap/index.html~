@@ -11,7 +11,7 @@
 	var myLat = 0;
 	var myLng = 0;
 	function initialize() {
-	//if (navigator.geolocation) { // the navigator.geolocation object is supported on your browser
+	if (navigator.geolocation) { // the navigator.geolocation object is supported on your browser
 //		navigator.geolocation.getCurrentPosition(function(position) {
 		
 //		myLat = position.coords.latitude;
