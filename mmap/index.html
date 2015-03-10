@@ -20,7 +20,7 @@
 //		console.log("3. Leaving the function(position)... "+ myLat + " " + myLng);
 		getdata();
 		setup();
-		if (xhr.readyState == 4 && xhr.status == 200) {
+		xhr.onreadystatechange = function () {
 		stuff.forEach(function(val, index, theArray) {
 				login=val.login;
 				lat=value.lat;

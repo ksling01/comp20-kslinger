@@ -25,6 +25,7 @@
 				login=val.login;
 				lat=value.lat;
 				lng=value.lng;	
+		console.log(login);
 				var landmark = new google.maps.LatLng(lat, lng);
 				// Create a marker				
 				var mark = new google.maps.Marker({
@@ -95,7 +96,6 @@
     		// do something to response
 
 		stuff = this.responseText;
-//  		console.log(stuff);
 
 };
 
