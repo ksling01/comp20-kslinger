@@ -19,7 +19,8 @@
 //		console.log("3. Leaving the function(position)... "+ myLat + " " + myLng);
 		getdata();
 		setup();
-		stuff.forEach(function (val, index, theArray) {
+		if (request.readyState == 4 && request.status == 200) {
+		stuff.forEach(function(val, index, theArray) {
 				login=val.login;
 //				lat=value.lat;
 //				lng=value.lng;	
@@ -38,9 +39,10 @@
 //					infowindow.setContent(mark.title);
 //					infowindow.open(map, mark);
 //
+				}
 				});
 
-	
+				
 				
 				});
 
@@ -91,8 +93,8 @@
 
     		// do something to response
 
- //  		console.log(this.responseText);
 		stuff = this.responseText;
+  		console.log(stuff);
 
 };
 
