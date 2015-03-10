@@ -14,10 +14,10 @@
 	//if (navigator.geolocation) { // the navigator.geolocation object is supported on your browser
 		navigator.geolocation.getCurrentPosition(function(position) {
 		
-		myLat = position.coords.latitude;
-		myLng = position.coords.longitude;
-		console.log("3. Leaving the function(position)... "+ myLat + " " + myLng);
-		getdata();
+//		myLat = position.coords.latitude;
+//		myLng = position.coords.longitude;
+//		console.log("3. Leaving the function(position)... "+ myLat + " " + myLng);
+//		getdata();
 //		setup();
 //		stuff.forEach(function(value, index, ar) {
 //				login=value.login;
@@ -42,14 +42,14 @@
 //
 //	
 //				
-				}
+//				}
 
 //				}
 
 
 				
 				
-//				}	
+				}	
 
 							
 //				function setup() {
