@@ -49,54 +49,54 @@
 
 				
 				
-				}	
+//				}	
 
 							
-				function setup() {
-				var landmark = new google.maps.LatLng(myLat, myLng);
-				// Set up map
-				var myOptions = {
-					zoom: 13, // The larger the zoom number, the bigger the zoom
-					center: landmark,
-					mapTypeId: google.maps.MapTypeId.ROADMAP
-				};// Create the map in the "map_canvas" <div>
-				var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-				// Create a marker				
-				var mark = new google.maps.Marker({
-					position: landmark,
-					title: "TravisIsdale"
-				});
-				mark.setMap(map);
+//				function setup() {
+//				var landmark = new google.maps.LatLng(myLat, myLng);
+//				// Set up map
+//				var myOptions = {
+//					zoom: 13, // The larger the zoom number, the bigger the zoom
+//					center: landmark,
+//					mapTypeId: google.maps.MapTypeId.ROADMAP
+//				};// Create the map in the "map_canvas" <div>
+//				var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+//				// Create a marker				
+//				var mark = new google.maps.Marker({
+//					position: landmark,
+//					title: "TravisIsdale"
+//				});
+//				mark.setMap(map);
+//
+//				// This is a global info window...
+//				var infowindow = new google.maps.InfoWindow();
+//				// Open info window on click of marker
+//				google.maps.event.addListener(mark, 'click', function() {
+//					infowindow.setContent(mark.title);
+//					infowindow.open(map, mark);
+//
+//				});
+//				}
+//				
+//
 
-				// This is a global info window...
-				var infowindow = new google.maps.InfoWindow();
-				// Open info window on click of marker
-				google.maps.event.addListener(mark, 'click', function() {
-					infowindow.setContent(mark.title);
-					infowindow.open(map, mark);
+//			function getdata() {
+//		var xhr = new XMLHttpRequest();
+//
+//		xhr.open('POST', 'https://secret-about-box.herokuapp.com/sendLocation', true);
+//
+//		xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+//
+//			xhr.onreadystatechange = function () {
+//
+  //  		// do something to response
 
-				});
-				}
-				
+   //		console.log(this.responseText);
+//		stuff = this.responseText;
 
+//};
 
-			function getdata() {
-		var xhr = new XMLHttpRequest();
-
-		xhr.open('POST', 'https://secret-about-box.herokuapp.com/sendLocation', true);
-
-		xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-
-			xhr.onreadystatechange = function () {
-
-    		// do something to response
-
-   		console.log(this.responseText);
-		stuff = this.responseText;
-
-};
-
-xhr.send('login=TravisIsdale&lat='+myLat+'&lng='+myLng+'');
+//xhr.send('login=TravisIsdale&lat='+myLat+'&lng='+myLng+'');
 
 				
 				}
