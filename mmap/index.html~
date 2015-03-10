@@ -31,16 +31,16 @@
 					position: landmark,
 					title: "login"
 				});
-//				mark.setMap(map);
-//
-//				// This is a global info window...
-//				var infowindow = new google.maps.InfoWindow();
-//				// Open info window on click of marker
-//				google.maps.event.addListener(mark, 'click', function() {
-//					infowindow.setContent(mark.title);
-//					infowindow.open(map, mark);
-//
-				
+				mark.setMap(map);
+
+				// This is a global info window...
+				var infowindow = new google.maps.InfoWindow();
+				// Open info window on click of marker
+				google.maps.event.addListener(mark, 'click', function() {
+					infowindow.setContent(mark.title);
+					infowindow.open(map, mark);
+
+				});
 				});
 				
 				
