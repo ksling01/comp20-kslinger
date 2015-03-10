@@ -62,8 +62,8 @@
 				var mark = new google.maps.Marker({										
 					position: landmark,
 					title: "TravisIsdale",
-					//icon: new google.maps.MarkerImage('headshot.jpg', null, null, null,
-			       		 //new google.maps.Size(20, 20))
+					icon: new google.maps.MarkerImage('headshot.jpg', null, null, null,
+			       		 new google.maps.Size(20, 20))
 				});
 				mark.setMap(map);
 
