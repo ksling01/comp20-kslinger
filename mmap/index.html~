@@ -24,7 +24,7 @@
 		stuff.forEach(function(val, index, theArray) {
 				lat=val.lat;
 				lng=val.lng;
-				var R = 6371000; // km 
+				var R = 6371; // km 
 				var x1 = lat-myLat;
 				var dLat =x1*Math.PI/180;  
 				var x2 = lng-myLng;
@@ -33,7 +33,8 @@
 	
 			var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 				
 				var d = R * c; 
-				d=d.toFixed(1);
+				d=d*.621371;
+				d=d.toFixed(3);
 				login=val.login;
 				login=login+" " +d;
 					
@@ -62,7 +63,7 @@
 				var mark = new google.maps.Marker({										
 					position: landmark,
 					title: "TravisIsdale",
-					icon: new google.maps.MarkerImage('headshot.jpg', null, null, null,
+					icon: new google.maps.MarkerImage('headshot.png', null, null, null,
 			       		 new google.maps.Size(20, 20))
 				});
 				mark.setMap(map);
