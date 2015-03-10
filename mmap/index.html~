@@ -41,9 +41,9 @@
 
 				var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
 
-				var d = R * c; 
+//				var d = R * c; 
 				login=val.login;
-				login=login+" " +d;	
+//				login=login+" " +d;	
 				var marker = new google.maps.Marker({
 				
 				position: new google.maps.LatLng(lat, lng),
