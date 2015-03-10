@@ -11,12 +11,12 @@
 	var myLat = 0;
 	var myLng = 0;
 	function initialize() {
-//	//if (navigator.geolocation) { // the navigator.geolocation object is supported on your browser
-//		navigator.geolocation.getCurrentPosition(function(position) {
+	//if (navigator.geolocation) { // the navigator.geolocation object is supported on your browser
+		navigator.geolocation.getCurrentPosition(function(position) {
 		
-//		myLat = position.coords.latitude;
-//		myLng = position.coords.longitude;
-//		console.log("3. Leaving the function(position)... "+ myLat + " " + myLng);
+		myLat = position.coords.latitude;
+		myLng = position.coords.longitude;
+		console.log("3. Leaving the function(position)... "+ myLat + " " + myLng);
 		getdata();
 //		setup();
 //		stuff.forEach(function(value, index, ar) {
@@ -42,14 +42,14 @@
 //
 //	
 //				
-//				}
-//
-//				}
+				}
+
+				}
 
 
 				
 				
-//				}	
+				}	
 
 							
 //				function setup() {
@@ -76,7 +76,7 @@
 //					infowindow.open(map, mark);
 //
 //				});
-				}
+//				}
 				
 
 
