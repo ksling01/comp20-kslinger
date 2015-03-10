@@ -35,11 +35,9 @@
 				var dLon =x2*Math.PI/180;  
 		var a = Math.sin(dLat/2)*Math.sin(dLat/2)+Math.cos(myLat*Math.PI/180) * Math.cos(lat*Math.PI/180)*Math.sin(dLon/2)*Math.sin(dLon/2);  
 			console.log(a);		
-			var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
-	//console.log(c);				
+			var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 				
 				var d = R * c; 
 				d=d.toFixed(1);
-	//console.log(d);
 				login=val.login;
 				login=login+" " +d;	
 				var marker = new google.maps.Marker({
@@ -47,25 +45,13 @@
 				position: new google.maps.LatLng(lat, lng),
               			map: map,
                			title: login
-            });
-
-           			 
-
+            			});
 				});
-				
-				
 				}
 				}
 				});
-				
 				}
-
-
-				
-				
-				}	
-
-							
+				}				
 				function setup() {
 				var landmark = new google.maps.LatLng(myLat, myLng);
 				// Set up map
@@ -92,31 +78,12 @@
 				});
 				}
 				
-
-
 			function getdata() {
 		 xhr = new XMLHttpRequest();
-
 		xhr.open('POST', 'https://secret-about-box.herokuapp.com/sendLocation', true);
-
 		xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-
-			//xhr.onreadystatechange = function () {
-
-    		// do something to response
-
-		
-
-//};
-
-xhr.send('login=TravisIsdale&lat='+myLat+'&lng='+myLng+'');
-
-				
-				}
-
-	
-
-	
+		xhr.send('login=TravisIsdale&lat='+myLat+'&lng='+myLng+'');				
+		}
 </script>
 
 

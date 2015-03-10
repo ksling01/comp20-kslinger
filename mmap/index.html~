@@ -38,7 +38,7 @@
 			var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
 	//console.log(c);				
 				var d = R * c; 
-				d=d.toFixed(3);
+				d=d.toFixed(1);
 	//console.log(d);
 				login=val.login;
 				login=login+" " +d;	
