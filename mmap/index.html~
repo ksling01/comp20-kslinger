@@ -31,8 +31,8 @@
 				var R = 6371; // km 
 				var x1 = Math.abs(lat-myLat);
 				var dLat = x1.toRad();  
-				var x2 = Math.abs(lng-myLng);
-				var dLon = x2.toRad();  
+//				var x2 = Math.abs(lng-myLng);
+//				var dLon = x2.toRad();  
 //				var a = Math.sin(dLat/2) * Math.sin(dLat/2) + 
 
   //             		 Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) * 
@@ -115,6 +115,10 @@ xhr.send('login=TravisIsdale&lat='+myLat+'&lng='+myLng+'');
 
 				
 				}
+
+		function torad(x) {
+		x=x*Math.PI/180;
+}
 	
 
 	
