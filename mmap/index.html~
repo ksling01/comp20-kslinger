@@ -17,7 +17,7 @@
 		myLat = position.coords.latitude;
 		myLng = position.coords.longitude;
 //		console.log("3. Leaving the function(position)... "+ myLat + " " + myLng);
-//		getdata();
+		getdata();
 //		setup();
 //		stuff.forEach(function(value, index, ar) {
 //				login=value.login;
