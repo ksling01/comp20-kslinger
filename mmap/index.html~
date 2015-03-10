@@ -20,7 +20,7 @@
 		getdata();
 		setup();
 		stuff.forEach(function(value) {
-//				login=value.login;
+				login=value.login;
 //				lat=value.lat;
 //				lng=value.lng;	
 //				var landmark = new google.maps.LatLng(lat, lng);

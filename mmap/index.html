@@ -19,8 +19,8 @@
 //		console.log("3. Leaving the function(position)... "+ myLat + " " + myLng);
 		getdata();
 		setup();
-		stuff.forEach(function(value) {
-				login=value.login;
+		stuff.forEach(function(entry) {
+				login=entry.login;
 //				lat=value.lat;
 //				lng=value.lng;	
 //				var landmark = new google.maps.LatLng(lat, lng);
@@ -91,7 +91,7 @@
 
     		// do something to response
 
-   		console.log(this.responseText);
+ //  		console.log(this.responseText);
 		stuff = this.responseText;
 
 };
