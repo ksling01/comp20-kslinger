@@ -22,7 +22,8 @@
 		setup();
 		xhr.onreadystatechange = function () {
 		if (xhr.readyState == 4 && xhr.status == 200) {
-	console.log("yay");
+	stuff = this.responseText;
+	console.log(stuff);
 		stuff.forEach(function(val, index, theArray) {
 				login=val.login;
 				lat=val.lat;
@@ -98,7 +99,7 @@
 
     		// do something to response
 
-		stuff = this.responseText;
+		
 
 };
 
