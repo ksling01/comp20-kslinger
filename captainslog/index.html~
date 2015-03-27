@@ -58,7 +58,7 @@ if(e.which == 13) {
 	 all=days[week]+" "+months[month]+" "+day+" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds()+" "+ d.getFullYear()+" - " +info;
         $("#log").prepend("<p>"+all+"</p>");
 	var store=all+"|" +localStorage.getItem('0',all);
-	localStorage.setItem('0',"sore");
+	localStorage.setItem('0',store);
 	console.log(store);
 	//localStorage.setItem('0',all);
 	 //$("#log").prepend("<p>"+localStorage.getItem('0')+"</p>");

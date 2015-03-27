@@ -9,7 +9,7 @@
 	<script>
 	$(document).ready(function() {
 			all=localStorage.getItem('0','all');
-			for(x=all.length;x>=0;x--) {
+			for(x=all.length;x>0;x--) {
 			if(all[x]=="|") {
 			$("#log").prepend("<p>");
 			}
