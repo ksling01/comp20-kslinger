@@ -29,7 +29,26 @@ Testing was first done without looking into any of the source code. This was to 
 Abstract of findings
 </h2>
 <p> 
-stuff
+Like most unsecure websites all the attacks that can be done on this website come from the user input. The site does not parse through any of the user input before it is logged on to the database or the site so almost anything can be written. 
+</p>
+<h2>
+Issues Found
+</h2>
+<p> 
+<ol><li>Cross Site Scripting
+<ul>
+<li>
+Severity of issue: <span class="red">High </span> Users can input code or script to make peform malicious attacks
+</li>
+<li>
+Data that goes through the POST API is not filtered in any way before it is sent to the database. The user may enter any data they choose. This could include JavaScript or HTML code that could cause unwanted results. For example running a login with <span class="code">&lt;script&gt;function a() { document.write("<&lt;img src='http://i0.kym-cdn.com/entries/icons/original/000/009/266/funny-pictures-if-it-fits-i-sits.jpg'>lt;/img&gt;"); }; window.onload = a; alert("Hidden scripted image.");&lt;script&gt;</span> Will inject a alert that says the site is XSS and the redirect to a picture of a cat sitting in a milk carton. 
+</li>
+<li>
+Severity of issue: High
+</li>
+</ul></li>
+
+</ol>
 </p>
 <h2>
 Conclusion
