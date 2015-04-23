@@ -49,26 +49,42 @@ Data that goes through the POST API is not filtered in any way before it is sent
 In order to fix this problem the user input must be filtered before it is stored in the database or displayed on the application.<span class="red">Do not trust user input!</span> Any text that could be HTML or JavaScript must be stripped down. This can be done by removing the > tags and replacing them with &lt;
 </li>
 </ul></li>
-</ol>
-</p>
 
 
 
-<p> 
-<ol><li>Modifying any user data
+
+
+<li>Modifying any user data
 <ul>
 <li>
 Severity of issue: <span class="red">low </span> Anyone can update any users location
 </li>
 <li>
-With a posting application any of the locations associated with the logins can be modified. Anyone can submit that login and change the data any way they please. An example would be changing everyones location to the same place.
+With a posting application any of the locations associated with the logins can be modified. Anyone can submit that login and change the data any way they please. An example would be changing everyones location to the same place. <img class='image2' src="snip3.JPG">
 </li>
 <li>
-In order to fix this problem the user input must be filtered before it is stored in the database or displayed on the application.<span class="red">Do not trust user input!</span> Any text that could be HTML or JavaScript must be stripped down. This can be done by removing the > tags and replacing them with &lt;
+In order to fix this problem The application should require somesort of login or another credential in order th change the location. This credential should not be seen by anyone else besides the one who logs in thier information can only be changed by them. 
 </li>
 </ul></li>
-</ol>
-</p>
+
+
+
+ 
+<li>Modifying any user data
+<ul>
+<li>
+Severity of issue: <span class="red">low </span> Anyone can update any users location
+</li>
+<li>
+With a posting application any of the locations associated with the logins can be modified. Anyone can submit that login and change the data any way they please. An example would be changing everyones location to the same place. <img class='image2' src="snip3.JPG">
+</li>
+<li>
+In order to fix this problem The application should require somesort of login or another credential in order th change the location. This credential should not be seen by anyone else besides the one who logs in thier information can only be changed by them. 
+</li>
+</ul></li>
+
+
+
 
 <h2>
 Conclusion
