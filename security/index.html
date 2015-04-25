@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mmap Security Assessment</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<h1>Security Assessment of Marauders map</h1>
+<p>Prepared by <a href="http://ksling01.github.io">Kyle Slinger </a>4/22/15</p>
+
+<h2>
+Introduction
+</h2>
+<p> 
+This assessment tests the security of <a href="http://tuftsdev.github.io/WebProgramming/assignments/a3.html"> Marauders Map </a> 
+web application created by Sam Broner for <a href="http://tuftsdev.github.io/WebProgramming/"> Comp20</a> assignment 5. Marauders Map is 
+is a web application that takes in a user's 
+longitude and latitude placement and plots them on a map when they log in. The user can then see where all the other users have logged in and how far away they are from the user. Although this application runs smoothly when operated correctly, there are many vulnerabilities in the application where false information could be supplied or data taken from the site. 
+</p>
+<p>
+The purpose of this assessment is to show where attacks could be made on this particular application. 
+</p>
+<h2>
+Methodology
+</h2>
+<p> 
+Testing was done without looking into any of the source code. This was to simulate the conditions of a normal attacker. 
+</p>
+<h2>
+Abstract of findings
+</h2>
+<p> 
+Like most unsecure websites all the attacks that can be done on this website come from the user input. The site does not parse through any of the user input before it is logged on to the database or the site so almost anything can be written. 
+</p>
+<h2>
+Issues Found
+</h2>
+<p> 
+<ol><li>Cross Site Scripting
+<ul>
+<li>
+Severity of issue: <span class="red">High </span> Users can input code or script to make peform malicious attacks
+</li>
+<li>
+Data that goes through the POST API is not filtered in any way before it is sent to the database. The user may enter any data they choose. This could include JavaScript or HTML code that could cause unwanted results. For example running a login with <span class="code">&lt;script&gt;function a() { document.write("<&lt;img src='http://i0.kym-cdn.com/entries/icons/original/000/009/266/funny-pictures-if-it-fits-i-sits.jpg'>lt;/img&gt;"); }; window.onload = a; alert("Hidden scripted image.");&lt;script&gt;</span> Will inject a alert that says the site is XSS and the redirect to a picture of a cat sitting in a milk carton. 
+<img class='image' src="snip1.JPG"><img class='image' src="snip2.JPG">
+</li>
+<li>
+In order to fix this problem the user input must be filtered before it is stored in the database or displayed on the application.<span class="red">Do not trust user input!</span> Any text that could be HTML or JavaScript must be stripped down. This can be done by removing the > tags and replacing them with &lt;
+</li>
+</ul></li>
+
+
+
+
+
+<li>Modifying any user data
+<ul>
+<li>
+Severity of issue: <span class="red">low </span> Anyone can update any users location
+</li>
+<li>
+With a posting application any of the locations associated with the logins can be modified. Anyone can submit that login and change the data any way they please. An example would be changing everyones location to the same place. <img class='image2' src="snip3.JPG">
+</li>
+<li>
+In order to fix this problem The application should require somesort of login or another credential in order th change the location. This credential should not be seen by anyone else besides the one who logs in thier information can only be changed by them. 
+</li>
+</ul></li>
+
+
+
+ 
+<li>Creating endless loop to crash application
+<ul>
+<li>
+Severity of issue: <span class="red">High </span> doesnt allow the application to function
+</li>
+<li>
+The login credential that is sent ot the database is not filtered before it is sent. Scripts can be inserted into the application that can put the application into an infinite loop. This makes the application timeout and then it does not run properly. For example when the code &lt;script&gt;while(true){} &lt;script&gt; is inserted the code goes into an imfinite while loop and does not load properly. The following picture is the application after the loop is inserted. <div> <img class='image2' src="snip4.JPG"> </div>
+</li>
+<li>
+In order to fix this problem The application should again filter through any user input. Any input that code be read as code by the application needs to be stripped away before it is sent to the database.
+</li>
+</ul></li>
+
+
+
+
+<h2>
+Conclusion
+</h2>
+<p> 
+Due to vulnerabilities within the Marauders Map application it is easy to modify the data for malicious purposes as well as make the application inoperable. If these changes were made to the application it would not be susceptible to these basic attacks by the users. Fortunately, most of the high risk changes are easy to change and will not affect the performance of the application at all. It is recommended that the application take these considerations in when updating the code. Once update another security assessment should be requested. 
+</p>
+</body>
+</html>
