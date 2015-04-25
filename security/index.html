@@ -24,7 +24,7 @@ The purpose of this assessment is to show where attacks could be made on this pa
 Methodology
 </h2>
 <p> 
-Testing was done without looking into any of the source code. This was to simulate the conditions of a normal attacker. Only to components that they viewed were looked at. 
+Testing was done without looking into any of the source code. This was to simulate the conditions of a normal attacker. 
 </p>
 <h2>
 Abstract of findings
@@ -70,16 +70,16 @@ In order to fix this problem The application should require somesort of login or
 
 
  
-<li>Modifying any user data
+<li>Creating endless loop to crash application
 <ul>
 <li>
-Severity of issue: <span class="red">low </span> Anyone can update any users location
+Severity of issue: <span class="red">High </span> doesnt allow the application to function
 </li>
 <li>
-With a posting application any of the locations associated with the logins can be modified. Anyone can submit that login and change the data any way they please. An example would be changing everyones location to the same place. <img class='image2' src="snip3.JPG">
+The login credential that is sent ot the database is not filtered before it is sent. Scripts can be inserted into the application that can put the application into an infinite loop. This makes the application timeout and then it does not run properly. For example when the code &lt;script&gt;while(true){} &lt;script&gt; is inserted the code goes into an imfinite while loop and does not load properly. The following picture is the application after the loop is inserted. <div> <img class='image2' src="snip4.JPG"> </div>
 </li>
 <li>
-In order to fix this problem The application should require somesort of login or another credential in order th change the location. This credential should not be seen by anyone else besides the one who logs in thier information can only be changed by them. 
+In order to fix this problem The application should again filter through any user input. Any input that code be read as code by the application needs to be stripped away before it is sent to the database.
 </li>
 </ul></li>
 
@@ -90,7 +90,7 @@ In order to fix this problem The application should require somesort of login or
 Conclusion
 </h2>
 <p> 
-stuff
+Due to vulnerabilities within the Marauders Map application it is easy to modify the data for malicious purposes as well as make the application inoperable. If these changes were made to the application it would not be susceptible to these basic attacks by the users. Fortunately, most of the high risk changes are easy to change and will not affect the performance of the application at all. It is recommended that the application take these considerations in when updating the code. Once update another security assessment should be requested. 
 </p>
 </body>
 </html>
