@@ -13,4 +13,4 @@ I think that learning the how to use and write API in the websites is huge. Bein
 I also thing that learning a little about securtiy is very important. A lof of people do not understand what is happening when they browse the web. Being able t understand a bit about how attacking works gives me a huge head up on how to defend myself against these kids of things. 
 
 5.Now that you have finished this course, what topic would you like to delve deeper into?
-#I am very interested in the front end development of these websites. I enjoy writing the HTMl and CSS to do whatever I want it to. I would like to leanr how to do more dynamic front end work so I can use that to build websites. 
+I am very interested in the front end development of these websites. I enjoy writing the HTMl and CSS to do whatever I want it to. I would like to leanr how to do more dynamic front end work so I can use that to build websites. 
